@@ -61,7 +61,7 @@ onPressed: () {
   },
 ```
 
-## Listas
+## Listas en Dart
 ```
 List<String> myList = [
   'Angela',
@@ -101,3 +101,33 @@ Se puede viajar en el tiempo con el historial
 Con backslash
 `'gino\'s favorite food'`
 
+## Clases en Dart
+Deben empezar con mayusculas. Se necesita inicializar tanto `questionText` debido a conflicto de tipos y `q` porque queremos pasar parametros nombrados
+```
+class Question {
+  String questionText = '';
+  bool questionAnswer = true;
+
+  Question({String q = '', bool a = true}) {
+    questionText = q;
+    questionAnswer = a;
+  }
+}
+
+List<Question> questionBank = [
+    Question(
+        q: 'You can lead a cow down stairs but not up stairs.', 
+        a: false),
+    Question(
+        q: 'Approximately one quarter of human bones are in the feet.',
+        a: true),
+    Question(
+        q: 'A slug\'s blood is green.', 
+        a: true),
+  ];
+
+questionNumber = 0; // se incrementara de uno en uno
+
+String question = questionBank[questionNumber % questionBank.length].questionText
+bool correctAnswer =questionBank[questionNumber % questionBank.length].questionAnswer;
+```
