@@ -60,3 +60,32 @@ onPressed: () {
     });
   },
 ```
+
+## Listas
+```
+List<String> myList = [
+  'Angela',
+  'James',
+  'Katie',
+  'Jack'
+];
+
+void main(){
+  // acceder por indice
+  print(myList[2]);
+  
+  // acceder por método
+  print(myList.first);
+  
+  // obtener indice de elemento
+  print(myList.indexOf('Jack'));
+  
+  // agregar elemento al final
+  myList.add('Ben');
+  print(myList);
+  
+  // agregar elemento en el indice x
+  myList.insert(2, 'Gino');
+  print(myList);
+}
+```
