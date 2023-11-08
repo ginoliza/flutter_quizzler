@@ -89,3 +89,15 @@ void main(){
   print(myList);
 }
 ```
+
+## Historial de codigo
+Se puede viajar en el tiempo con el historial
+`File -> Local History -> Show history`
+
+## Ignorar typos
+`Mouse encima->Añadir a diccionario`
+
+## Comillas dentro de un string
+Con backslash
+`'gino\'s favorite food'`
+
