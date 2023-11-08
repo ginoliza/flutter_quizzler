@@ -38,6 +38,7 @@ class _QuizPageState extends State<QuizPage> {
     'Approximately one quarter of human bones are in the feet.',
     'A slug\'s blood is green.'
   ];
+  List<bool> answers = [false, true, true];
 
   int questionNumber = 0;
 
@@ -70,6 +71,13 @@ class _QuizPageState extends State<QuizPage> {
               ),
               onPressed: () {
                 print("True got pressed");
+                bool correctAnswer = answers[questionNumber % 3];
+                if (correctAnswer == true) {
+                  print("correct!");
+                } else {
+                  print("wrong");
+                }
+
                 setState(() {
                   questionNumber += 1;
                 });
@@ -94,7 +102,13 @@ class _QuizPageState extends State<QuizPage> {
                 backgroundColor: Colors.red,
               ),
               onPressed: () {
-                print("True got pressed\n$questionNumber");
+                print("False got pressed\n$questionNumber");
+                bool correctAnswer = answers[questionNumber % 3];
+                if (correctAnswer == false) {
+                  print("correct!");
+                } else {
+                  print("wrong");
+                }
                 setState(() {
                   questionNumber += 1;
                 });
